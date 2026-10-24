@@ -1,11 +1,18 @@
 # analysis.R — Monthly expense analysis by category
 
 # - - Data - -
-
+amount   <- c(8000, 450, 120, 300, 800, 1500, 600, 250, 4500, 200, 90, 1200)
+category <- c("Rent", "Food", "Transport", "Food", "Internet", "Fun",
+              "Books", "Transport", "Food", "Food", "Transport", "Fun")
+budget   <- c(Books = 500, Food = 4000, Fun = 2000,
+              Internet = 800, Rent = 8000, Transport = 500)
 
 # TODO 1: Convert category to a factor. Print its levels and 
 #         count how many transactions each category has.
 
+category <- factor(category)
+levels(category)
+table(category)
 
 # TODO 2: Total monthly spending, and the number of transactions.
 
